@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "souvik.babanhazra@gmail.com",
+                "Name": "Souvik Hazra"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "Control brightness of external monitors",
+        "Icon": "display-brightness-symbolic",
+        "Id": "com.s2labs.brightness-control",
+        "Name": "Brightness Control",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ]
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-NotificationAreaCategory": "Hardware"
+}
