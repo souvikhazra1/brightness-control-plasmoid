@@ -50,7 +50,7 @@ Item {
                     } else if (line.startsWith("I2C bus") && !invalidDisplay) {
                         i2cBus = line.split(/:/)[1].trim().substr(9);
                         // request for current brightness
-                        executable.exec(`ddcutil getvcp -b ${i2cBus} ${control}`);
+                        executable.exec(`ddcutil getvcp -b ${i2cBus} ${control} | grep "VCP code"`);
                     } else if (line.startsWith("Monitor") && !invalidDisplay) {
                         name = line.split(/:/)[2].trim() || `Display ${index}`;
                     }
