@@ -27,7 +27,6 @@ Item {
         property string nextBrightnessCommand: ""
 
         onNewData: {
-            console.log(sourceName)
             if (sourceName == listCmd) {
                 brightnessReadCount = 0;
                 var respLines = data["stdout"].trim().split(/\n/);
@@ -107,12 +106,6 @@ Item {
             anchors.fill: parent
             source: "display-brightness-symbolic"
         }
-        /* Rectangle {
-            width: 2
-            height: parent.height * ((displays.length > 0 ? displays[0].brightness : 0) / 100.0)
-            anchors.bottom: parent.bottom
-            anchors.right: parent.right
-        } */
         MouseArea {
             anchors.fill: parent
             onClicked: {
